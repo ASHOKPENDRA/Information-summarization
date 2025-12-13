@@ -116,7 +116,7 @@ $user = htmlspecialchars($_SESSION['user']['fname']);
   </header>
 
   <section class="hero">
-    <h2>Welcome back, <?php echo $user; ?> 👋</h2>
+    <h2>Welcome back, <?php echo $user; ?> </h2>
     <p>Continue exploring summaries of top books across genres.</p>
   </section>
 

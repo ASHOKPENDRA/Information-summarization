@@ -43,7 +43,7 @@ if (isset($_FILES['bookFile']) && $_FILES['bookFile']['error'] === UPLOAD_ERR_OK
             }
         }
     } catch (Exception $e) {
-        die("❌ Error reading file: " . $e->getMessage());
+        die("Error reading file: " . $e->getMessage());
     }
 }
 
@@ -54,7 +54,7 @@ if (!empty($_POST['bookText'])) {
 
 $text = trim($text);
 if (empty($text)) {
-    die("❌ No valid text found in input or uploaded file.");
+    die(" No valid text found in input or uploaded file.");
 }
 
 // Limit input size
@@ -95,16 +95,16 @@ curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
 $response = curl_exec($ch);
 
 if (curl_errno($ch)) {
-    die("❌ cURL Error: " . curl_error($ch));
+    die(" cURL Error: " . curl_error($ch));
 }
 curl_close($ch);
 
 $result = json_decode($response, true);
 
 // ================= PARSE RESPONSE ================= //
-$mainTopic = "⚠️ Not generated.";
+$mainTopic = " Not generated.";
 $points = [];
-$final = "⚠️ Not generated.";
+$final = " Not generated.";
 $summaryText = ""; // full summary text to store
 
 if (isset($result['message']['content'][0]['text'])) {
@@ -139,7 +139,7 @@ if (isset($result['message']['content'][0]['text'])) {
         }
         $summaryText .= "Final Summary:\n$final";
     } else {
-        // ✅ JSON parsed successfully
+        //  JSON parsed successfully
         $mainTopic = $parsed['main_topic'] ?? $mainTopic;
         $points = $parsed['important_points'] ?? [];
         $final = $parsed['final_summary'] ?? $final;
@@ -152,7 +152,7 @@ if (isset($result['message']['content'][0]['text'])) {
         $summaryText .= "Final Summary:\n$final";
     }
 } else {
-    $summaryText = "⚠️ Summary not generated.";
+    $summaryText = " Summary not generated.";
 }
 
 // ================= SAVE TO DATABASE ================= //
@@ -256,18 +256,18 @@ $con->close();
 </head>
 <body>
 
-<header>⚡ Smart Summarizer</header>
+<header> Smart Summarizer</header>
 <div class="container">
     <div class="card">
-        <h2>✅ Original Text (Preview)</h2>
+        <h2> Original Text (Preview)</h2>
         <pre><?= htmlspecialchars(substr($text, 0, 1500)) ?>...</pre>
     </div>
 
     <div class="card">
-        <h2>📌 Main Topic</h2>
+        <h2> Main Topic</h2>
         <div class="summary"><?= htmlspecialchars($mainTopic) ?></div>
 
-        <h2>📑 Important Points</h2>
+        <h2> Important Points</h2>
         <div class="summary">
             <?php if (!empty($points)): ?>
                 <ul>
@@ -278,16 +278,16 @@ $con->close();
                     <?php endforeach; ?>
                 </ul>
             <?php else: ?>
-                ⚠️ Not generated.
+                 Not generated.
             <?php endif; ?>
         </div>
 
-        <h2>📝 Final Summary</h2>
+        <h2> Final Summary</h2>
         <div class="summary"><?= htmlspecialchars($final) ?></div>
     </div>
 
-    <a href="search.html" class="btn">🔄 Summarize Another</a>
-    <a href="my_summaries.php" class="btn">📚 My Summaries</a>
+    <a href="search.html" class="btn"> Summarize Another</a>
+    <a href="my_summaries.php" class="btn"> My Summaries</a>
 </div>
 </body>
 </html>

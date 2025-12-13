@@ -50,7 +50,7 @@ if (isset($_SESSION['user'])) {
 <body>
 
   <header>
-    <h1>📘 E-Book Summarization</h1>
+    <h1> E-Book Summarization</h1>
     <div class="auth-buttons">
       <a href="loginpage.php">Login</a>
       <a href="reg.php">Register</a>
@@ -81,7 +81,7 @@ if (isset($_SESSION['user'])) {
     </div>
   </section>
 
-  <footer>&copy; 2025 E-Book Summarizer. All rights reserved.</footer>
+  <footer></footer>
 
 </body>
 </html>

@@ -9,7 +9,7 @@ $stmt->bind_param("s", $userEmail);
 $stmt->execute();
 $result = $stmt->get_result();
 ?>
-<h2>📚 My Saved Summaries</h2>
+<h2> My Saved Summaries</h2>
 <table style="width:100%; border-collapse: collapse; background:#1e1e1e;">
   <tr>
     <th style="padding:10px; border:1px solid #333;">Date</th>

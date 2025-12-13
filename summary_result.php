@@ -150,11 +150,11 @@ li {
 <body>
 <div class="container">
     <div class="card">
-        <h3>📌 Main Topic</h3>
+        <h3> Main Topic</h3>
         <p><?= htmlspecialchars($main_topic) ?></p>
 
         <?php if (!empty($important_points)): ?>
-        <h3>📄 Important Points</h3>
+        <h3> Important Points</h3>
         <ul>
             <?php foreach ($important_points as $point): ?>
                 <li><?= htmlspecialchars($point) ?></li>
@@ -163,14 +163,14 @@ li {
         <?php endif; ?>
 
         <?php if (!empty(trim($final_summary))): ?>
-        <h3>📝 Final Summary</h3>
+        <h3> Final Summary</h3>
         <p><?= htmlspecialchars($final_summary) ?></p>
         <?php endif; ?>
     </div>
 
     <div class="button-group">
-        <a href="search.php" class="btn btn-primary">🔄 Summarize Another</a>
-        <a href="my_summaries.php" class="btn btn-primary">📑 My Summaries</a>
+        <a href="search.php" class="btn btn-primary">Summarize Another</a>
+        <a href="my_summaries.php" class="btn btn-primary">My Summaries</a>
     </div>
 </div>
 </body>

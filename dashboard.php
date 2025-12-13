@@ -98,7 +98,7 @@ body {
 <body>
 
 <div class="sidebar" role="navigation" aria-label="Sidebar Navigation">
-    <div class="dashboard-title">📘 Dashboard</div>
+    <div class="dashboard-title"> Dashboard</div>
     <div class="profile-pic-wrapper" id="profilePicWrapper" tabindex="0" role="button" aria-label="View Profile Picture">
         <img src="<?= htmlspecialchars($profile_image) ?>" alt="Profile Picture" class="profile-circle" />
     </div>
@@ -126,7 +126,7 @@ body {
     </section>
 
     <section class="welcome-box" aria-live="polite">
-        <span style="display:block;font-size:3rem;margin-bottom:10px;">📚</span>
+        <span style="display:block;font-size:3rem;margin-bottom:10px;"></span>
         Ready to create new knowledge? Upload your books and get concise summaries instantly!
     </section>
 </main>

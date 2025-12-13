@@ -70,7 +70,7 @@
 </head>
 <body>
   <header>
-    <h1>💻 Coding Subjects</h1>
+    <h1>Coding Subjects</h1>
     <p>Choose a topic to dive into and start learning!</p>
   </header>
 

@@ -126,7 +126,7 @@ tr:hover {
 </head>
 <body>
 <div class="container">
-<h1>📚 My Summaries</h1>
+<h1>My Summaries</h1>
 
 <?php if ($result && $result->num_rows > 0): ?>
 <table>

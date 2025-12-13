@@ -175,7 +175,7 @@ if (!isset($_SESSION['user'])) {
 </head>
 <body>
   <main class="container" role="main" aria-labelledby="title">
-    <h1 id="title" class="title">📄 Upload or Paste Text to Summarize</h1>
+    <h1 id="title" class="title"> Upload or Paste Text to Summarize</h1>
     <form id="summarizeForm" method="post" action="upload.php" enctype="multipart/form-data" novalidate>
       <label class="gradient-label" for="bookText">Paste your text below</label>
       <textarea id="bookText" name="bookText" placeholder="Paste your text here (or upload a document below)"></textarea>
@@ -223,7 +223,7 @@ if (!isset($_SESSION['user'])) {
             }
             textArea.value = txt.trim();
           } catch {
-            message.textContent = "❌ Could not extract text from PDF.";
+            message.textContent = " Could not extract text from PDF.";
           }
         };
         reader.readAsArrayBuffer(file);
@@ -234,13 +234,13 @@ if (!isset($_SESSION['user'])) {
             const result = await mammoth.extractRawText({ arrayBuffer: e.target.result });
             textArea.value = result.value.trim();
           } catch {
-            message.textContent = "❌ Could not extract text from DOCX.";
+            message.textContent = " Could not extract text from DOCX.";
           }
         };
         reader.readAsArrayBuffer(file);
 
       } else {
-        message.textContent = "❌ Unsupported file format! Please use TXT, PDF, DOC or DOCX.";
+        message.textContent = " Unsupported file format! Please use TXT, PDF, DOC or DOCX.";
         fileInput.value = "";
       }
     });

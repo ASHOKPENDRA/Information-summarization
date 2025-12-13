@@ -18,7 +18,7 @@ if ($con->connect_error) {
 
 $user_email = $_SESSION['user']['email'];
 
-// ✅ Handle profile image upload
+//  Handle profile image upload
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['profile_image'])) {
     $uploadDir = "uploads/";
     $fileName = basename($_FILES['profile_image']['name']);
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['profile_image'])) {
             $update->execute();
             $update->close();
 
-            // ✅ Update session immediately
+            // Update session immediately
             $_SESSION['user']['profile_image'] = $targetFile;
 
             // Refresh page to show updated image
@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['profile_image'])) {
     }
 }
 
-// ✅ Fetch user info
+// Fetch user info
 $query = "SELECT fname, email, profile_image, bio FROM userTable WHERE email = ?";
 $stmt = $con->prepare($query);
 $stmt->bind_param('s', $user_email);
@@ -167,7 +167,7 @@ input[type="file"] {
     <?php if (isset($error)): ?>
         <div class="msg"><?= htmlspecialchars($error) ?></div>
     <?php elseif (isset($_GET['updated'])): ?>
-        <div class="msg">✅ Profile picture updated successfully!</div>
+        <div class="msg">Profile picture updated successfully!</div>
     <?php endif; ?>
 
     <h2><?= htmlspecialchars($name) ?></h2>
