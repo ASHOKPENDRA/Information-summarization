@@ -7,7 +7,7 @@ connection and follows secure coding practices.
 
 ---
 
-## 🚀 Features
+## Features
 - Text and document summarization
 - API-based summarization integration
 - PHP-based backend logic
@@ -19,7 +19,7 @@ connection and follows secure coding practices.
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 - PHP
 - JavaScript
 - HTML5
@@ -30,7 +30,7 @@ connection and follows secure coding practices.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 ---
 
 ## ⚙ Setup Instructions
@@ -43,19 +43,19 @@ connection and follows secure coding practices.
 
 ---
 
-## 🔐 Security Practices
+## Security Practices
 - API keys and database credentials are stored in config.php
 - Sensitive files are excluded from GitHub using .gitignore
 - Sample configuration file is provided for reference
 
 ---
 
-## 🌍 Live Demo
+## Live Demo
 This project is hosted on *InfinityFree*.
 
 ---
 
-## 👨‍💻 Author
+## Author
 *Pendra Ashok*  
 B.Tech (Artificial Intelligence & Machine Learning)  
 Aspiring Software Developer
