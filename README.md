@@ -33,7 +33,7 @@ connection and follows secure coding practices.
 ## Project Structure
 ---
 
-## ⚙ Setup Instructions
+## Setup Instructions
 1. Clone this repository
 2. Create config.php using config.sample.php
 3. Add MySQL database credentials
