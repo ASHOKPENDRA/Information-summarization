@@ -30,6 +30,7 @@ connection and follows secure coding practices.
 
 ---
 
+
 ## Project Structure
 ---
 
